@@ -1,5 +1,29 @@
+// require('dotenv').config({path: './env'});       this line effect the consistency of code
+
+import dotenv from "dotenv"
 import mongoose from 'mongoose';
-import {DB_NAME} from './constants';
+import {DB_NAME} from './constants.js';
+import connectDB from './db/index.js';
+
+
+dotenv.config(
+    {
+        path:'.env'
+    }
+)
+
+connectDB()
+
+
+
+
+
+
+
+
+
+
+/*
 import express from 'express'
 const app=express()
 (async()=>{
@@ -15,7 +39,8 @@ const app=express()
     })
     } catch (error) {
         console.error("ERROR :" ,error)
-        throw err
+        throw error
         
     }
 })()
+*/ 
